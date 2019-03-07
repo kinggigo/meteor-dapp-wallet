@@ -19,10 +19,6 @@ The available units
 selectableUnits = [
   {
     text: 'DAON',
-    value: 'daon'
-  },
-  {
-    text: 'ETHER',
     value: 'ether'
   },
   {
