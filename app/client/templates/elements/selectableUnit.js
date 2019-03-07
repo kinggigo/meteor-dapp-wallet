@@ -18,6 +18,10 @@ The available units
 */
 selectableUnits = [
   {
+    text: 'DAON',
+    value: 'daon'
+  },
+  {
     text: 'ETHER',
     value: 'ether'
   },
@@ -77,6 +81,7 @@ Template['elements_selectableUnit'].helpers({
     */
   selectedUnit: function() {
     var unit = _.find(selectableUnits, function(unit) {
+      console.log('==================', unit.value, EthTools.getUnit());
       return unit.value === EthTools.getUnit();
     });
 
@@ -96,7 +101,8 @@ Template['elements_selectableUnit'].helpers({
     @method (selectedUnit)
     */
   selectable: function() {
-    return Session.get('network') == 'main';
+    // return Session.get('network') == 'main';
+    return false;
   }
 });
 

@@ -277,7 +277,7 @@ Template.registerHelper('isMainNetwork', function() {
   return Session.get('network') === 'main';
 });
 
-Template.registerHelper('andus_formatBalance', function(number, format, unit) {
+Template.registerHelper('dapp_formatBalance', function(number, format, unit) {
   // let balance = EthTools.formatBalance(number, format, unit);
   let fnumber = EthTools.formatNumber(number, format);
 
