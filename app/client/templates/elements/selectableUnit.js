@@ -81,7 +81,6 @@ Template['elements_selectableUnit'].helpers({
     */
   selectedUnit: function() {
     var unit = _.find(selectableUnits, function(unit) {
-      console.log('==================', unit.value, EthTools.getUnit());
       return unit.value === EthTools.getUnit();
     });
 
