@@ -277,9 +277,9 @@ Template.registerHelper('isMainNetwork', function() {
   return Session.get('network') === 'main';
 });
 
-Template.registerHelper('dapp_formatBalance', function(number, format, unit) {
-  // let balance = EthTools.formatBalance(number, format, unit);
-  let fnumber = EthTools.formatNumber(number, format);
-
-  return `${fnumber} DAON`;
-});
+// Template.registerHelper('dapp_formatBalance', function(number, format, unit) {
+//   // let balance = EthTools.formatBalance(number, format, unit);
+//   let fnumber = EthTools.formatNumber(number, format);
+//
+//   return `${fnumber} DAON`;
+// });
