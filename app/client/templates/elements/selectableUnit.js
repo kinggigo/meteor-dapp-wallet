@@ -22,7 +22,7 @@ selectableUnits = [
     value: 'daon'
   },
   {
-    text: 'ETHER',
+    text: 'DAON',
     value: 'ether'
   },
   {
@@ -101,7 +101,7 @@ Template['elements_selectableUnit'].helpers({
     */
   selectable: function() {
     // return Session.get('network') == 'main';
-    return false;
+    return true;
   }
 });
 
