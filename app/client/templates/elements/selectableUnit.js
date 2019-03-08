@@ -19,6 +19,10 @@ The available units
 selectableUnits = [
   {
     text: 'DAON',
+    value: 'daon'
+  },
+  {
+    text: 'ETHER',
     value: 'ether'
   },
   {
@@ -97,7 +101,7 @@ Template['elements_selectableUnit'].helpers({
     */
   selectable: function() {
     // return Session.get('network') == 'main';
-    return false;
+    return true;
   }
 });
 

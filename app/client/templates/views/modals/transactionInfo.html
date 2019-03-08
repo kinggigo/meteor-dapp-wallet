@@ -40,7 +40,7 @@
                        {{#if tokenId}}
                             {{tokenValue}}
                         {{else}}
-                            {{formatTransactionBalance value exchangeRates}}
+                            {{formatTransactionBalance value exchangeRates "DAON"}}
                             {{#if $neq unit 'ether'}}
                                 <br>
                                 <small>

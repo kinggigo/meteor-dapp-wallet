@@ -570,7 +570,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
               from: Helpers.getAccountNameByAddress(log.returnValues.from),
               amount: EthTools.formatBalance(
                 log.returnValues.value,
-                '0,0.00[000000] unit',
+                '0,0.00[000000]',
                 'ether'
               )
             },
@@ -626,7 +626,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
               from: Helpers.getAccountNameByAddress(newDocument.address),
               amount: EthTools.formatBalance(
                 log.returnValues.value,
-                '0,0.00[000000] unit',
+                '0,0.00[000000]',
                 'ether'
               )
             },
@@ -708,7 +708,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
                   from: Helpers.getAccountNameByAddress(newDocument.address),
                   amount: EthTools.formatBalance(
                     log.returnValues.value,
-                    '0,0.00[000000] unit',
+                    '0,0.00[000000]',
                     'ether'
                   )
                 },

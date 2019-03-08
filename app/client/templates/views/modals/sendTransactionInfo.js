@@ -24,7 +24,7 @@ Template['views_modals_sendTransactionInfo'].helpers({
         new BigNumber(this.estimatedGas, 10).times(
           new BigNumber(this.gasPrice, 10)
         ),
-        '0,0.0[0000000] unit',
+        '0,0.0[0000000]',
         'ether'
       );
   }
