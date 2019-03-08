@@ -124,9 +124,10 @@ Helpers.formatNumberByDecimals = function(number, decimals) {
     numberFormat += '0';
   }
 
-  return EthTools.formatNumber(
+  return EthTools.formatBalance(
     new BigNumber(number, 10).dividedBy(Math.pow(10, decimals)),
-    numberFormat
+    numberFormat,
+    'ether'
   );
 };
 
