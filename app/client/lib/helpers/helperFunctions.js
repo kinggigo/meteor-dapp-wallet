@@ -124,15 +124,6 @@ Helpers.formatNumberByDecimals = function(number, decimals) {
     numberFormat += '0';
   }
 
-  console.log(
-    '=================',
-    EthTools.formatBalance(
-      new BigNumber(number, 10).dividedBy(Math.pow(10, decimals)),
-      numberFormat,
-      'ether'
-    )
-  );
-
   return EthTools.formatBalance(
     new BigNumber(number, 10).dividedBy(Math.pow(10, decimals)),
     numberFormat,
@@ -345,7 +336,7 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
     var price = new BigNumber(String(web3.fromWei(value, 'ether')), 10).times(
       exchangeRates[unit].price
     );
-    return EthTools.formatNumber(price, format) + ' ' + unit.toUpperCase();
+    return EthTools.formatBalance(price, format, 'ether') + 'DAON';
   } else {
     return (
       EthTools.formatBalance(value, format + '[0000000000000000]', 'ether') +

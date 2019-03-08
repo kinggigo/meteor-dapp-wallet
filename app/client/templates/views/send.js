@@ -42,7 +42,7 @@ var checkOverDailyLimit = function(address, wei, template) {
       new BigNumber(account.dailyLimitSpent || '0', 10)
     );
 
-    if (restDailyLimit.lt(new BigNumber(wei, 10)))
+    if (restDailyLimit.lt(new BigNumber(wei, 10))) {
       TemplateVar.set(
         'dailyLimitText',
         new Spacebars.SafeString(
@@ -53,7 +53,7 @@ var checkOverDailyLimit = function(address, wei, template) {
           })
         )
       );
-    else
+    } else {
       TemplateVar.set(
         'dailyLimitText',
         new Spacebars.SafeString(
@@ -63,7 +63,10 @@ var checkOverDailyLimit = function(address, wei, template) {
           })
         )
       );
-  } else TemplateVar.set('dailyLimitText', false);
+    }
+  } else {
+    TemplateVar.set('dailyLimitText', false);
+  }
 };
 
 /**
@@ -144,7 +147,6 @@ var getSelectedFromAccount = function() {
 // Set basic variables
 Template['views_send'].onCreated(function() {
   var template = this;
-
   // SET THE DEFAULT VARIABLES
   TemplateVar.set('amount', '0');
   TemplateVar.set('estimatedGas', 300000);
@@ -184,7 +186,6 @@ Template['views_send'].onCreated(function() {
   // change the amount when the currency unit is changed
   template.autorun(function(c) {
     var unit = EthTools.getUnit();
-
     if (!c.firstRun && TemplateVar.get('selectedToken') === 'ether') {
       TemplateVar.set(
         'amount',
@@ -388,6 +389,7 @@ Template['views_send'].helpers({
     } else {
       amount = new BigNumber(gasInWei, 10);
     }
+
     return amount;
   },
   /**

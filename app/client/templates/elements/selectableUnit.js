@@ -101,7 +101,7 @@ Template['elements_selectableUnit'].helpers({
     */
   selectable: function() {
     // return Session.get('network') == 'main';
-    return true;
+    return false;
   }
 });
 
