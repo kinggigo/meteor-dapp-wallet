@@ -6,14 +6,16 @@ Meteor.startup(function() {
     var userLang = navigator.language || navigator.userLanguage,
       availLang = TAPi18n.getLanguages();
 
-    // set default language
-    if (_.isObject(availLang) && availLang[userLang]) {
-      TAPi18n.setLanguage(userLang);
-    } else if (_.isObject(availLang) && availLang[userLang.substr(0, 2)]) {
-      TAPi18n.setLanguage(userLang.substr(0, 2));
-    } else {
-      TAPi18n.setLanguage('en');
-    }
+    TAPi18n.setLanguage('en');
+
+    // // set default language
+    // if (_.isObject(availLang) && availLang[userLang]) {
+    //   TAPi18n.setLanguage(userLang);
+    // } else if (_.isObject(availLang) && availLang[userLang.substr(0, 2)]) {
+    //   TAPi18n.setLanguage(userLang.substr(0, 2));
+    // } else {
+    //   TAPi18n.setLanguage('en');
+    // }
   }
 
   // change moment and numeral language, when language changes

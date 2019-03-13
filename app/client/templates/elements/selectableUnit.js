@@ -26,7 +26,7 @@ selectableUnits = [
     value: 'ether'
   },
   {
-    text: 'FINNEY', //(µΞ)
+    text: 'DAON', //(µΞ)
     value: 'finney'
   },
   {
@@ -112,6 +112,6 @@ Template['elements_selectableUnit'].events({
     @event change .inline-form
     */
   'change .inline-form': function(e, template, value) {
-    EthTools.setUnit(value);
+    EthTools.setUnit('ether');
   }
 });
